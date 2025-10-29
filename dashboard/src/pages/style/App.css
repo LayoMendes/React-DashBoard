@@ -1,0 +1,166 @@
+/* Fundo da página com degradê diagonal de preto para cinza */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #000000 0%, #555555 100%);
+}
+
+/* Container principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centraliza horizontalmente */
+  justify-content: center;  /* Centraliza verticalmente */
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  padding-bottom: 60px;     /* Espaço para barra inferior */
+  box-sizing: border-box;
+}
+
+/* Título centralizado e flutuante com efeito RGB ao hover */
+.dashboard-title {
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  cursor: default;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  display: inline-block;
+
+  /* Transição para transform */
+  transition: transform 0.3s ease;
+
+  /* Sombra inicial discreta */
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Hover: leve flutuação e animação de glow RGB */
+.dashboard-title:hover {
+  transform: scale(1.2); /* aumenta 20% */
+  animation: rgb-glow 1.5s infinite alternate;
+}
+
+/* Animação de glow RGB */
+/* Animação de glow RGB mais forte */
+/* Animação de glow RGB corrigida */
+@keyframes rgb-glow {
+  0% {
+    text-shadow: 
+      0 0 10px #ff0000,
+      0 0 20px #00ff00,
+      0 0 30px #0000ff,
+      0 0 40px #ff00ff,
+      0 0 50px #00ffff;
+  }
+  25% {
+    text-shadow: 
+      0 0 15px #00ff00,
+      0 0 25px #0000ff,
+      0 0 35px #ff0000,
+      0 0 45px #00ffff,
+      0 0 55px #ff00ff;
+  }
+  50% {
+    text-shadow: 
+      0 0 20px #0000ff,
+      0 0 40px #00ff00,
+      0 0 50px #ff0000,
+      0 0 60px #ff00ff,
+      0 0 70px #00ffff;
+  }
+  75% {
+    text-shadow: 
+      0 0 25px #ff00ff,
+      0 0 35px #00ffff,
+      0 0 45px #ff0000,
+      0 0 55px #00ff00,
+      0 0 65px #0000ff;
+  }
+  100% {
+    text-shadow: 
+      0 0 10px #ff0000,
+      0 0 20px #00ff00,
+      0 0 30px #0000ff,
+      0 0 40px #ff00ff,
+      0 0 50px #00ffff;
+  }
+}
+.clock {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  cursor: default;
+
+
+
+}
+
+/* Reutilizando a animação do título */
+@keyframes rgb-glow {
+  0% {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #00ff00, 0 0 30px #0000ff;
+  }
+  25% {
+    text-shadow: 0 0 15px #00ff00, 0 0 25px #0000ff, 0 0 35px #ff0000;
+  }
+  50% {
+    text-shadow: 0 0 20px #0000ff, 0 0 40px #00ff00, 0 0 50px #ff0000;
+  }
+  75% {
+    text-shadow: 0 0 35px #ff0000, 0 0 45px #00ff00, 0 0 55px #0000ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #00ff00, 0 0 30px #0000ff;
+  }
+}
+
+
+
+
+
+
+
+/* Barra de navegação inferior */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.9);
+  border-top: 1px solid #333;
+  padding: 10px 0;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.bottom-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.bottom-nav li {
+  color: #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.bottom-nav li:hover {
+  color: white;
+}
+
+.bottom-nav li.active {
+  color: #ffffff; /* destaque */
+  font-weight: bold;
+}
